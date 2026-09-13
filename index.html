@@ -1,28 +1,36 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  padding: 20px;
-}
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-h1 { color: #003366; }
-form { display: flex; flex-direction: column; gap: 15px; }
-input, select, textarea, button {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-button {
-  background-color: #003366;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzón CUC Escucha</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Buzón CUC Escucha</h1>
+    <p>Queremos conocer tus ideas y sugerencias para mejorar tu experiencia académica y universitaria.</p>
+    
+    <form id="buzonForm">
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="bienestar">Bienestar</option>
+        <option value="servicios">Servicios</option>
+        <option value="clases">Clases / Docentes</option>
+        <option value="inclusion">Inclusión y Espacios</option>
+      </select>
+
+      <label for="sugerencia">Sugerencia o Idea:</label>
+      <textarea id="sugerencia" name="sugerencia" rows="4" required></textarea>
+
+      <label for="correo">Correo Institucional:</label>
+      <input type="email" id="correo" name="correo" placeholder="usuario@cuc.edu.co" required>
+
+      <button type="submit">Enviar Sugerencia</button>
+    </form>
+  </div>
+</body>
+</html>
